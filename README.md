@@ -43,3 +43,52 @@ Legenda:
 0 - Agua
 3 - Navio
 O programa posiciona corretamente os dois navios (um horizontal e outro vertical) sem sobreposição e dentro dos limites do tabuleiro.
+
+# Nível Aventureiro:
+
+Melhorias e explicações:
+Enumeração de orientações:
+
+Adicionei um tipo Orientacao para representar os diferentes tipos de posicionamento (horizontal, vertical, diagonal principal e diagonal secundária).
+
+Validação de posições diagonais:
+
+A função posicaoValida foi expandida para verificar:
+Diagonal principal: onde linha e coluna aumentam juntas (i == j)
+Diagonal secundária: onde linha aumenta enquanto coluna diminui (i + j == TAMANHO - 1)
+
+Posicionamento de navios diagonais:
+A função posicionarNavio agora trata os quatro tipos de orientação.
+
+O programa posiciona:
+
+1 navio horizontal
+1 navio vertical
+1 navio na diagonal principal
+1 navio na diagonal secundária
+
+Saída esperada:
+
+text
+Navio horizontal posicionado com sucesso na linha 2, coluna 3.
+Navio vertical posicionado com sucesso na linha 5, coluna 7.
+Navio diagonal principal posicionado com sucesso na linha 1, coluna 1.
+Navio diagonal secundaria posicionado com sucesso na linha 2, coluna 7.
+
+Tabuleiro de Batalha Naval:
+    0  1  2  3  4  5  6  7  8  9 
+ 0  0  0  0  0  0  0  0  0  0  0 
+ 1  0  3  0  0  0  0  0  0  0  0 
+ 2  0  0  0  3  3  3  0  3  0  0 
+ 3  0  0  0  0  0  0  0  0  3  0 
+ 4  0  0  0  0  0  0  0  0  0  0 
+ 5  0  0  0  0  0  0  0  3  0  0 
+ 6  0  0  0  0  0  0  0  3  0  0 
+ 7  0  0  0  0  0  0  0  3  0  0 
+ 8  0  0  0  0  0  0  0  0  0  0 
+ 9  0  0  0  0  0  0  0  0  0  0 
+
+Legenda:
+0 - Agua
+3 - Navio
+O programa agora suporta todos os tipos de posicionamento necessários e valida corretamente as posições dos navios, incluindo os casos diagonais.
