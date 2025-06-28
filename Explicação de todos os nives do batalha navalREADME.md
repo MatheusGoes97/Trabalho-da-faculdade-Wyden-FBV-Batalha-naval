@@ -92,3 +92,49 @@ Legenda:
 0 - Agua
 3 - Navio
 O programa agora suporta todos os tipos de posicionamento necessários e valida corretamente as posições dos navios, incluindo os casos diagonais.
+
+# Nível Mestre:
+
+Matrizes de Habilidade:
+Adicionei três tipos de habilidades (Cone, Cruz e Octaedro)
+Cada habilidade é representada por uma matriz 5x5
+A função criarHabilidade gera os padrões específicos para cada tipo
+
+Padrões das Habilidades:
+Cone: Forma triangular que se expande para baixo
+Cruz: Linha horizontal e vertical que se cruzam no centro
+Octaedro: Forma de losango (diagonais que se expandem do centro)
+
+Aplicação das Habilidades:
+A função aplicarHabilidade sobrepõe a matriz de habilidade no tabuleiro
+As áreas afetadas são marcadas com o valor 5
+As habilidades respeitam os limites do tabuleiro
+
+Visualização:
+
+O tabuleiro mostra claramente:
+Água (0)
+Navios (3)
+Áreas de habilidade (5)
+
+Saída esperada:
+
+text
+Tabuleiro de Batalha Naval com Habilidades:
+    0  1  2  3  4  5  6  7  8  9 
+ 0  0  0  0  0  0  0  0  0  0  0 
+ 1  0  3  0  0  0  0  0  0  0  0 
+ 2  0  0  0  3  3  3  0  3  0  0 
+ 3  0  0  0  0  0  0  5  0  3  0 
+ 4  0  0  5  0  5  5  5  0  0  0 
+ 5  0  0  5  0  0  0  0  3  0  0 
+ 6  0  0  5  0  0  0  0  3  0  0 
+ 7  0  5  5  5  5  5  0  3  0  0 
+ 8  0  0  5  0  0  0  0  0  0  0 
+ 9  0  0  0  0  0  0  0  0  0  0 
+
+Legenda:
+0 - Agua
+3 - Navio
+5 - Area afetada por habilidade
+O programa agora mostra claramente as áreas de efeito das três habilidades especiais sobrepostas ao tabuleiro de batalha naval, mantendo a visualização dos navios posicionados anteriormente.
